@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Каталог итальянской литературы</title>
+<style>
+  :root{
+    --bg:#f7f6f1; --paper:#ffffff; --ink:#1f241f; --muted:#6f756c;
+    --accent:#008c45; --red:#cd212a; --gold:#c9a227; --line:#e3e2d6; --hero:#00582c;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#11150f;--paper:#1a211a;--ink:#eef2ea;--muted:#a1aa9d;--accent:#55d68e;--red:#ff7b82;--gold:#e8c55a;--line:#2d382c;--hero:#07291a;}
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.55}
+  header{text-align:center;padding:64px 20px 52px;color:#f5faf5;position:relative;
+    background:linear-gradient(135deg,var(--hero),#008c45)}
+  /* триколор: зелёный — белый — красный */
+  header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;
+    background:linear-gradient(90deg,#008c45 0 33.3%,#fff 33.3% 66.6%,#cd212a 66.6% 100%)}
+  header h1{margin:0 0 8px;font-size:clamp(2rem,5vw,3.4rem);letter-spacing:.02em}
+  header h1 span{color:#d6ffe6}
+  header p{margin:0;color:#d8efe0;font-style:italic;font-size:1.1rem}
+  .ornament{color:#d6ffe6;letter-spacing:.6em;margin-top:14px}
+  nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);
+    padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center}
+  nav a{color:var(--ink);text-decoration:none;padding:6px 14px;border:1px solid var(--line);
+    border-radius:999px;font-size:.95rem;transition:.2s;background:var(--paper)}
+  nav a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+  #search{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--paper);
+    color:var(--ink);font:inherit;min-width:220px}
+  #search:focus{outline:2px solid var(--gold)}
+  main{max-width:1150px;margin:0 auto;padding:30px 20px 60px}
+  section{margin-top:56px;scroll-margin-top:80px}
+  section h2{font-size:2rem;margin:0 0 6px;display:flex;align-items:center;gap:14px}
+  section h2 .ico{font-size:1.6rem}
+  section h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--red),transparent)}
+  .desc{color:var(--muted);margin:0 0 22px;font-style:italic}
+  .authors{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px}
+  .author{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--accent);
+    border-radius:12px;padding:20px 22px;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:.25s}
+  .author:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.14);border-top-color:var(--red)}
+  .author h3{margin:0 0 2px;font-size:1.35rem;color:var(--accent)}
+  .years{font-size:.85rem;color:var(--muted);margin-bottom:10px;display:block}
+  .author ul{list-style:none;margin:0;padding:0}
+  .author li{border-top:1px dashed var(--line)}
+  .author li a{display:block;padding:8px 2px;color:var(--ink);text-decoration:none;transition:.2s}
+  .author li a:hover{color:var(--red);padding-left:8px}
+  .hidden{display:none!important}
+  #empty{text-align:center;color:var(--muted);margin-top:40px;display:none}
+  footer{text-align:center;padding:30px;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Каталог <span>итальянской литературы</span></h1>
+  <p>Разделы · писатели · произведения</p>
+  <div class="ornament">❦ ❦ ❦</div>
+</header>
+
+<nav>
+  <a href="#vozrozhdenie">Средневековье и Возрождение</a>
+  <a href="#romany19">Романы XIX века</a>
+  <a href="#poeziya">Поэзия</a>
+  <a href="#drama">Драматургия</a>
+  <a href="#xx">Литература XX века</a>
+  <a href="#sovremennaya">Современная проза</a>
+  <a href="#detskaya">Детская литература</a>
+  <a href="#nobel">Нобелевские лауреаты</a>
+  <input id="search" type="search" placeholder="🔍 Поиск писателя или книги…">
+</nav>
+
+<main>
+
+<section id="vozrozhdenie">
+  <h2><span class="ico">🏛️</span>Средневековье и Возрождение</h2>
+  <p class="desc">«Три короны» итальянской литературы и поэты эпохи Ренессанса.</p>
+  <div class="authors">
+    <article class="author"><h3>Данте Алигьери</h3><span class="years">1265 – 1321</span>
+      <ul>
+        <li><a href="bozhestvennaya-komediya/">Божественная комедия</a></li>
+        <li><a href="novaya-zhizn/">Новая жизнь</a></li>
+      </ul></article>
+    <article class="author"><h3>Франческо Петрарка</h3><span class="years">1304 – 1374</span>
+      <ul>
+        <li><a href="kantsoner/">Канцоньере</a></li>
+      </ul></article>
+    <article class="author"><h3>Джованни Боккаччо</h3><span class="years">1313 – 1375</span>
+      <ul>
+        <li><a href="dekameron/">Декамерон</a></li>
+      </ul></article>
+    <article class="author"><h3>Никколо Макиавелли</h3><span class="years">1469 – 1527</span>
+      <ul>
+        <li><a href="gosudar/">Государь</a></li>
+        <li><a href="mandragora/">Мандрагора</a></li>
+      </ul></article>
+    <article class="author"><h3>Лудовико Ариосто</h3><span class="years">1474 – 1533</span>
+      <ul>
+        <li><a href="neistovyy-rolan/">Неистовый Роланд</a></li>
+      </ul></article>
+    <article class="author"><h3>Торквато Тассо</h3><span class="years">1544 – 1595</span>
+      <ul>
+        <li><a href="osvobozhdyonnyy-ierusalim/">Освобождённый Иерусалим</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="romany19">
+  <h2><span class="ico">📖</span>Романы XIX века</h2>
+  <p class="desc">Исторический роман и веризм.</p>
+  <div class="authors">
+    <article class="author"><h3>Алессандро Мандзони</h3><span class="years">1785 – 1873</span>
+      <ul>
+        <li><a href="obruchyonnye/">Обручённые</a></li>
+      </ul></article>
+    <article class="author"><h3>Джованни Верга</h3><span class="years">1840 – 1922</span>
+      <ul>
+        <li><a href="semya-malavolya/">Семья Малаволья</a></li>
+        <li><a href="mastro-don-gesualdo/">Мастро-дон Джезуальдо</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="poeziya">
+  <h2><span class="ico">🪶</span>Поэзия</h2>
+  <p class="desc">От романтизма до герметизма и «поэзии чистого слова».</p>
+  <div class="authors">
+    <article class="author"><h3>Уго Фосколо</h3><span class="years">1778 – 1827</span>
+      <ul>
+        <li><a href="o-grobnitsakh/">О гробницах</a></li>
+      </ul></article>
+    <article class="author"><h3>Джакомо Леопарди</h3><span class="years">1798 – 1837</span>
+      <ul>
+        <li><a href="pesni-leopardi/">Песни</a></li>
+        <li><a href="zibaldone/">Дневник мыслей</a></li>
+      </ul></article>
+    <article class="author"><h3>Джозуэ Кардуччи</h3><span class="years">1835 – 1907</span>
+      <ul>
+        <li><a href="varvarskie-ody/">Варварские оды</a></li>
+      </ul></article>
+    <article class="author"><h3>Джузеппе Унгаретти</h3><span class="years">1888 – 1970</span>
+      <ul>
+        <li><a href="radost-korablekrusheniy/">Радость кораблекрушений</a></li>
+      </ul></article>
+    <article class="author"><h3>Эудженио Монтале</h3><span class="years">1896 – 1981</span>
+      <ul>
+        <li><a href="kosti-karakatitsy/">Кости каракатицы</a></li>
+      </ul></article>
+    <article class="author"><h3>Сальваторе Квазимодо</h3><span class="years">1901 – 1968</span>
+      <ul>
+        <li><a href="voda-i-zemlya/">Вода и земля</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="drama">
+  <h2><span class="ico">🎭</span>Драматургия</h2>
+  <p class="desc">Комедия дель арте, театр Гольдони и «театр в театре» Пиранделло.</p>
+  <div class="authors">
+    <article class="author"><h3>Карло Гольдони</h3><span class="years">1707 – 1793</span>
+      <ul>
+        <li><a href="sluga-dvukh-gospod/">Слуга двух господ</a></li>
+        <li><a href="traktirshchitsa/">Трактирщица</a></li>
+      </ul></article>
+    <article class="author"><h3>Карло Гоцци</h3><span class="years">1720 – 1806</span>
+      <ul>
+        <li><a href="printsessa-turandot/">Принцесса Турандот</a></li>
+        <li><a href="lyubov-k-trem-apelsinam/">Любовь к трём апельсинам</a></li>
+      </ul></article>
+    <article class="author"><h3>Луиджи Пиранделло</h3><span class="years">1867 – 1936</span>
+      <ul>
+        <li><a href="shest-personazhey-v-poiskakh-avtora/">Шесть персонажей в поисках автора</a></li>
+        <li><a href="genrikh-iv/">Генрих IV</a></li>
+      </ul></article>
+    <article class="author"><h3>Эдуардо Де Филиппо</h3><span class="years">1900 – 1984</span>
+      <ul>
+        <li><a href="filumena-marturano/">Филумена Мартурано</a></li>
+        <li><a href="neapol-gorod-millionerov/">Неаполь — город миллионеров</a></li>
+      </ul></article>
+    <article class="author"><h3>Дарио Фо</h3><span class="years">1926 – 2016</span>
+      <ul>
+        <li><a href="sluchaynaya-smert-anarkhista/">Случайная смерть анархиста</a></li>
+        <li><a href="misteriya-buff/">Мистерия-буфф</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="xx">
+  <h2><span class="ico">⭐</span>Литература XX века</h2>
+  <p class="desc">Психологический роман, неореализм и фантастическая проза.</p>
+  <div class="authors">
+    <article class="author"><h3>Итало Свево</h3><span class="years">1861 – 1928</span>
+      <ul>
+        <li><a href="samopoznanie-dzeno/">Самопознание Дзено</a></li>
+      </ul></article>
+    <article class="author"><h3>Луиджи Пиранделло</h3><span class="years">1867 – 1936</span>
+      <ul>
+        <li><a href="pokoynyy-mattia-paskal/">Покойный Маттиа Паскаль</a></li>
+        <li><a href="odin-nikto-i-sto-tysyach/">Один, никто и сто тысяч</a></li>
+      </ul></article>
+    <article class="author"><h3>Джузеппе Томази ди Лампедуза</h3><span class="years">1896 – 1957</span>
+      <ul>
+        <li><a href="leopard/">Леопард</a></li>
+      </ul></article>
+    <article class="author"><h3>Альберто Моравиа</h3><span class="years">1907 – 1990</span>
+      <ul>
+        <li><a href="ravnodushnye/">Равнодушные</a></li>
+        <li><a href="rimlyanka/">Римлянка</a></li>
+      </ul></article>
+    <article class="author"><h3>Чезаре Павезе</h3><span class="years">1908 – 1950</span>
+      <ul>
+        <li><a href="luna-i-kostry/">Луна и костры</a></li>
+      </ul></article>
+    <article class="author"><h3>Дино Буццати</h3><span class="years">1906 – 1972</span>
+      <ul>
+        <li><a href="tatarskaya-pustynya/">Татарская пустыня</a></li>
+      </ul></article>
+    <article class="author"><h3>Эльза Моранте</h3><span class="years">1912 – 1985</span>
+      <ul>
+        <li><a href="istoriya-morante/">История</a></li>
+      </ul></article>
+    <article class="author"><h3>Примо Леви</h3><span class="years">1919 – 1987</span>
+      <ul>
+        <li><a href="esli-eto-chelovek/">Если это человек</a></li>
+        <li><a href="periodicheskaya-sistema/">Периодическая система</a></li>
+      </ul></article>
+    <article class="author"><h3>Итало Кальвино</h3><span class="years">1923 – 1985</span>
+      <ul>
+        <li><a href="baron-na-dereve/">Барон на дереве</a></li>
+        <li><a href="nevidimye-goroda/">Невидимые города</a></li>
+        <li><a href="esli-odnazhdy-zimney-nochyu-putnik/">Если однажды зимней ночью путник</a></li>
+      </ul></article>
+    <article class="author"><h3>Леонардо Шаша</h3><span class="years">1921 – 1989</span>
+      <ul>
+        <li><a href="den-soy/">День совы</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="sovremennaya">
+  <h2><span class="ico">🕮</span>Современная проза</h2>
+  <p class="desc">Семиотические детективы, неаполитанские саги и международные бестселлеры.</p>
+  <div class="authors">
+    <article class="author"><h3>Умберто Эко</h3><span class="years">1932 – 2016</span>
+      <ul>
+        <li><a href="imya-rozy/">Имя розы</a></li>
+        <li><a href="mayatnik-fuko/">Маятник Фуко</a></li>
+        <li><a href="ostrov-nakanune/">Остров накануне</a></li>
+      </ul></article>
+    <article class="author"><h3>Андреа Камиллери</h3><span class="years">1925 – 2019</span>
+      <ul>
+        <li><a href="forma-vody/">Форма воды</a></li>
+      </ul></article>
+    <article class="author"><h3>Элена Ферранте</h3><span class="years">псевдоним</span>
+      <ul>
+        <li><a href="moya-genialnaya-podruga/">Моя гениальная подруга</a></li>
+      </ul></article>
+    <article class="author"><h3>Алессандро Барикко</h3><span class="years">р. 1958</span>
+      <ul>
+        <li><a href="shyolk/">Шёлк</a></li>
+      </ul></article>
+    <article class="author"><h3>Паоло Джордано</h3><span class="years">р. 1982</span>
+      <ul>
+        <li><a href="odinochestvo-prostykh-chisel/">Одиночество простых чисел</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="detskaya">
+  <h2><span class="ico">🧸</span>Детская литература</h2>
+  <p class="desc">Деревянный мальчик, Чиполлино и приключения на море.</p>
+  <div class="authors">
+    <article class="author"><h3>Карло Коллоди</h3><span class="years">1826 – 1890</span>
+      <ul>
+        <li><a href="priklyucheniya-pinokkio/">Приключения Пиноккио</a></li>
+      </ul></article>
+    <article class="author"><h3>Эдмондо Де Амичис</h3><span class="years">1846 – 1908</span>
+      <ul>
+        <li><a href="serdtse/">Сердце</a></li>
+      </ul></article>
+    <article class="author"><h3>Эмилио Сальгари</h3><span class="years">1862 – 1911</span>
+      <ul>
+        <li><a href="chyornyy-korsar/">Чёрный Корсар</a></li>
+      </ul></article>
+    <article class="author"><h3>Джанни Родари</h3><span class="years">1920 – 1980</span>
+      <ul>
+        <li><a href="priklyucheniya-chipollino/">Приключения Чиполлино</a></li>
+        <li><a href="golubaya-strela/">Голубая стрела</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="nobel">
+  <h2><span class="ico">🏅</span>Нобелевские лауреаты</h2>
+  <p class="desc">Итальянские авторы, получившие Нобелевскую премию по литературе.</p>
+  <div class="authors">
+    <article class="author"><h3>Джозуэ Кардуччи</h3><span class="years">лауреат 1906</span>
+      <ul>
+        <li><a href="varvarskie-ody/">Варварские оды</a></li>
+      </ul></article>
+    <article class="author"><h3>Грация Деледда</h3><span class="years">1871 – 1936 · лауреат 1926</span>
+      <ul>
+        <li><a href="trostnik-na-vetru/">Тростник на ветру</a></li>
+      </ul></article>
+    <article class="author"><h3>Луиджи Пиранделло</h3><span class="years">лауреат 1934</span>
+      <ul>
+        <li><a href="shest-personazhey-v-poiskakh-avtora/">Шесть персонажей в поисках автора</a></li>
+        <li><a href="pokoynyy-mattia-paskal/">Покойный Маттиа Паскаль</a></li>
+      </ul></article>
+    <article class="author"><h3>Сальваторе Квазимодо</h3><span class="years">лауреат 1959</span>
+      <ul>
+        <li><a href="voda-i-zemlya/">Вода и земля</a></li>
+      </ul></article>
+    <article class="author"><h3>Эудженио Монтале</h3><span class="years">лауреат 1975</span>
+      <ul>
+        <li><a href="kosti-karakatitsy/">Кости каракатицы</a></li>
+      </ul></article>
+    <article class="author"><h3>Дарио Фо</h3><span class="years">лауреат 1997</span>
+      <ul>
+        <li><a href="sluchaynaya-smert-anarkhista/">Случайная смерть анархиста</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<p id="empty">Ничего не найдено 📚</p>
+</main>
+
+<footer>© Каталог итальянской литературы</footer>
+
+<script>
+  const input = document.getElementById('search');
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let total = 0;
+    document.querySelectorAll('section').forEach(sec => {
+      let shown = 0;
+      sec.querySelectorAll('.author').forEach(card => {
+        const authorMatch = card.querySelector('h3').textContent.toLowerCase().includes(q);
+        let any = false;
+        card.querySelectorAll('li').forEach(li => {
+          const ok = !q || authorMatch || li.textContent.toLowerCase().includes(q);
+          li.classList.toggle('hidden', !ok);
+          if (ok) any = true;
+        });
+        card.classList.toggle('hidden', !any);
+        if (any) shown++;
+      });
+      sec.classList.toggle('hidden', shown === 0);
+      total += shown;
+    });
+    document.getElementById('empty').style.display = total ? 'none' : 'block';
+  });
+</script>
+</body>
+</html>
